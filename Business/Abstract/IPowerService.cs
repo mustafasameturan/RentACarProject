@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,10 +8,9 @@ namespace Business.Abstract
 {
     public interface IPowerService 
     {
-        void Add(Power power);
-        void Delete(Power power);
-        void Update(Power power);
-        List<Power> GetAllByBrandId(int id);
-        List<Power> GetAll();
+        IResult Add(Power power);
+        IResult Delete(Power power);
+        IResult Update(Power power);
+        IDataResult<List<Power>> GetAll();
     }
 }

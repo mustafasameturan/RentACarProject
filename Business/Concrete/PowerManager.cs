@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -16,29 +18,27 @@ namespace Business.Concrete
             _powerDal = powerDal;
         }
 
-        public void Add(Power power)
+        public IResult Add(Power power)
         {
             _powerDal.Add(power);
+            return new SuccessResult(Messages.AddedMessage);
         }
 
-        public void Delete(Power power)
+        public IResult Delete(Power power)
         {
             _powerDal.Delete(power);
+            return new SuccessResult(Messages.DeletedMessage);
         }
 
-        public List<Power> GetAll()
+        public IDataResult<List<Power>> GetAll()
         {
-            return _powerDal.GetAll();
+            return new SuccessDataResult<List<Power>>(_powerDal.GetAll(),Messages.EntitiesListed);
         }
 
-        public List<Power> GetAllByBrandId(int id)
-        {
-            return _powerDal.GetAll(p => p.BrandId == id);
-        }
-
-        public void Update(Power power)
+        public IResult Update(Power power)
         {
             _powerDal.Update(power);
+            return new SuccessResult(Messages.UpdatedMessage);
         }
     }
 }

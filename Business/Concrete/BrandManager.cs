@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -16,41 +18,35 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
-        public void Add(Brand brand)
+        public IResult Add(Brand brand)
         {
             if (brand.BrandName.Length > 2)
             {
                 _brandDal.Add(brand);
-                Console.WriteLine("Brand Added!");
+                return new SuccessResult(Messages.AddedMessage);
             }
-            else
-            {
-                Console.WriteLine("Please enter a value bigger than '2' character.");
-            }
+            return new ErrorResult(Messages.ErrorMessage);
         }
 
-        public void Delete(Brand brand)
+        public IResult Delete(Brand brand)
         {
             _brandDal.Delete(brand);
-            Console.WriteLine("Car Deleted!");
+            return new SuccessResult(Messages.DeletedMessage);
         }
 
-        public List<Brand> GetAll()
+        public IDataResult<List<Brand>> GetAll()
         {
-            return _brandDal.GetAll();
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.EntitiesListed);
         }
 
-        public void Update(Brand brand)
+        public IResult Update(Brand brand)
         {
             if (brand.BrandName.Length > 2)
             {
                 _brandDal.Update(brand);
-                Console.WriteLine("Brand Updated!");
+                return new SuccessResult(Messages.UpdatedMessage);
             }
-            else
-            {
-                Console.WriteLine("Please enter a value bigger than '2' character.");
-            }
+            return new ErrorResult(Messages.ErrorMessage);
         }
     }
 }
