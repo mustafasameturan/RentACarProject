@@ -18,6 +18,7 @@ namespace ConsoleUI
             //CustomerTest();
 
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            rentalManager.Add(new Rental { RentalId = 13, CarId = 9, CustomerId = 5, RentalDate = DateTime.Now });
             
 
         }
