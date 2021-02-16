@@ -35,9 +35,9 @@ namespace Business.Concrete
             var result = _rentalDal.GetRentalDetails(c => c.CarId == carId && c.ReturnDate == null);
             if(result.Count > 0)
             {
-                return new ErrorResult(Messages.ErrorMessage);
+                return new ErrorResult(Messages.RentalAddedErrorMessage);
             }
-            return new SuccessResult(Messages.AddedMessage);
+            return new SuccessResult(Messages.RentalAddedMessage);
         }
 
         public IResult Delete(Rental rental)

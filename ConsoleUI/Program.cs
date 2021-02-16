@@ -15,18 +15,26 @@ namespace ConsoleUI
             //ColorTest();
             //PowerTest();
             //UserTest();
-            //CustomerTest();
+            CustomerTest();
 
-            RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            rentalManager.Add(new Rental { RentalId = 13, CarId = 9, CustomerId = 5, RentalDate = DateTime.Now });
-            
+            //RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            //rentalManager.Add(new Rental { RentalId = 13, CarId = 9, CustomerId = 5, RentalDate = DateTime.Now });
+
+            //CarManager carManager = new CarManager(new EfCarDal());
+            //foreach (var car in carManager.GetByDailyPrice(50,500).Data)
+            //{
+            //    Console.WriteLine(car.Description);
+            //}
 
         }
 
         private static void CustomerTest()
         {
             CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
-            customerManager.Add(new Customer { CustomerId = 11, UserId = 11 });
+            foreach (var c in customerManager.GetAll().Data)
+            {
+                Console.WriteLine(c.CompanyName);
+            }
         }
 
         private static void UserTest()
@@ -41,7 +49,7 @@ namespace ConsoleUI
 
             foreach (var power in powerManager.GetAll().Data)
             {
-                Console.WriteLine(power.Id + " - " + power.BrandId + " - " + power.HorsePower);
+                Console.WriteLine(power.PowerId + " - " + power.BrandId + " - " + power.HorsePower);
             }
         }
 
@@ -58,11 +66,8 @@ namespace ConsoleUI
         private static void BrandTest()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-
-            foreach (var brand in brandManager.GetAll().Data)
-            {
-                Console.WriteLine(brand.BrandName);
-            }
+            brandManager.Add(new Brand { BrandId = 11, BrandName = "Redbull" });
+            
         }
 
         private static void CarTest()
