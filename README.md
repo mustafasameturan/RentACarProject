@@ -17,8 +17,18 @@ Projem adından da anlaşılacağı üzere bir araba kiralama sistemidir. Projem
 • Müşteri Ekle/Sil/Güncelle/Listele<br>
 • Araba Kiralama Özelliği<br>
 
-gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katmanlı mimarisi sayesinde kodun anlaşılabilirliği yüksektir. Tüm yazılan kodlar bir düzen içerisinde çalışmaktadır. Projemde kullandığım teknolojilerden bahsedeceğim fakat öncesinde sizden talep edilen farklı bir teknoloji kullanmak istediğinizde, projem herhangi bir zorluk yaratmayacaktır. Tamamen "Plug and Play" prensipi göz önüne alınarak tasarlanmıştır.
+gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katmanlı mimarisi sayesinde kodun anlaşılabilirliği yüksektir. Tüm yazılan kodlar bir düzen içerisinde çalışmaktadır. Projemde kullandığım teknolojilerden bahsedeceğim fakat öncesinde sizden talep edilen farklı bir teknoloji kullanmak istediğinizde, projem herhangi bir zorluk yaratmayacaktır. Tamamen "Plug and Play" prensipi göz önüne alınarak tasarlanmıştır. WebAPI arabirimi kullanılmıştır ve IoC Contanier tekniği kullanılmıştır.
 
 ![Katmanlı Mimari](https://user-images.githubusercontent.com/77546366/108605441-21567d80-73c5-11eb-9536-fa39515740d4.PNG) 
 
 ## ✓Kullanılan Teknolojiler
+• Database → SQL
+• Köprü → EntityFramework
+• IoC Container → Autofac
+• Arabirim → WebAPI
+• Katmanlar → Business,DataAccess,Entity,Core,ConsoleUI
+
+![Katmanlar](https://user-images.githubusercontent.com/77546366/108605460-3df2b580-73c5-11eb-9180-1cd05041a560.PNG)
+
+## ✓Son Güncellemeler
+• Autofac Desteği eklendi.
