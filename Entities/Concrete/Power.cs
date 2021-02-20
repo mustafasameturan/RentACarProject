@@ -7,8 +7,9 @@ namespace Entities.Concrete
 {
     public class Power : IEntity
     {
-        public string PowerId { get; set; }
+        public int PowerId { get; set; }
         public int BrandId { get; set; }
-        public int HorsePower { get; set; }
+        public int CarId { get; set; }
+        public string HorsePower { get; set; }
     }
 }
