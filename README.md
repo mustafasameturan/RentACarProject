@@ -33,4 +33,4 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 ## ✓Son Güncellemeler
 • Autofac Desteği eklendi.
 
-<a href= ″http://www.meb.gov.tr″ > Milli Eğitim Bakanlığı </a>
+
