@@ -245,6 +245,6 @@ Password | nchar(20)
  </table>
 
 ## ☑️Son Güncellemeler
-• Autofac desteği eklendi.
-• FluentValidation uygulaması sisteme entegre edildi.
+• Autofac desteği eklendi.<br>
+• FluentValidation uygulaması sisteme entegre edildi.<br>
 
