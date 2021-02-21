@@ -75,7 +75,6 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/UserValidator.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [PowerValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/PowerValidator.cs) <br><br>
 
-
 🗃 **``Core``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``CrossCuttingConcerns`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Validation`` <br>
@@ -124,7 +123,6 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfUserDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfPowerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfPowerDal.cs) <br><br>
 
-
 🗃 **``Entities``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Car.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Car.cs) <br>
@@ -138,7 +136,6 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``DTOs`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarDetailDto.cs](https://github.com/mustafasameturan/RentACarProject/tree/master/Entities/DTOs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalDetailDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/RentalDetailDto.cs) <br><br>
-
 
 🗃 **``WebAPI``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📃 [Startup.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Startup.cs) <br>
@@ -248,6 +245,6 @@ Password | nchar(20)
  </table>
 
 ## ☑️Son Güncellemeler
-• Autofac Desteği eklendi.
-
+• Autofac desteği eklendi.
+• FluentValidation uygulaması sisteme entegre edildi.
 
