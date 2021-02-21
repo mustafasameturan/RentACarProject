@@ -1,10 +1,17 @@
 # RentACarProject
 
-## ☑️Teşekkür 
+## 🌟Teşekkür 
 Öncelikle bana bu projeyi yazmamda büyük desteği olan, bana çok değerli bilgiler katan Engin Demiroğ Hocama teşekkür ediyorum. Ayrıca bu yolda bana destek olan arkadaşlarıma ve aileme de teşekkürlerimi iletiyorum.
 
-## ☑️Amaç
+## 🌟Amaç
 Projeyi yazmamdaki amacımdan bahsetmek istiyorum çünkü bunu projeyi daha anlamlı kılacak bir unsur olarak görüyorum. Başlıca amacım C# dilini, .NET dünyasını tanımak, bu yolda uzmanlaşmaktır. Yazdığım bu proje kendimi geliştirmeme vesile oluyor. Ayrıca bu proje ile birlikte SOLID yazılım tekniklerini öğreniyorum. Yazılım Geliştirici olma yolunda ilerlerken temelimi sağlam atmaya çalışıyorum ve sadece kendi penceremden değil, bu projeyi okuyacak, üstünde çalışacak insanların penceresinden de bakarak çalışmalarıma devam ediyorum.
+
+## 🌟İçindekiler
+- [Tanıtım](#tanıtım)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
+- [Katmanlar](#katmanlar)
+- [Sql Tables](#sql-tables)
+- [Son Güncellemeler](#son-güncellemeler)
 
 ## ☑️Tanıtım
 Projem adından da anlaşılacağı üzere bir araba kiralama sistemidir. Projemde, kendi oluşturduğum database üzerinden gelen bilgileri yönlendirerek;<br>
@@ -118,7 +125,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfPowerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfPowerDal.cs) <br><br>
 
 
- **``Entities``** <br>
+🗃 **``Entities``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Car.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Car.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Brand.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Brand.cs) <br>
