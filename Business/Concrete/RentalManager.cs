@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
@@ -23,10 +24,10 @@ namespace Business.Concrete
         }
 
         [ValidationAspect(typeof(RentalValidator))]
+        [CacheAspect]
+        [CacheRemoveAspect("IRentalService.Get")]
         public IResult Add(Rental rental)
         {
-            //ValidationTool.Validate(new RentalValidator(), rental);
-
             var result = CheckReturnDate(rental.CarId);
             if (!result.Success)
             {
@@ -52,6 +53,8 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedMessage);
         }
 
+        [CacheAspect]
+        [CacheRemoveAspect("IRentalService.Get")]
         public IDataResult<List<Rental>> GetAll()
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(), Messages.EntitiesListed);

@@ -1,8 +1,12 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -10,7 +14,9 @@ using Entities.DTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Transactions;
 
 namespace Business.Concrete
 {
@@ -23,10 +29,17 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
+        [SecuredOperation("car.add,admin")]
         [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("ICarService.Get")]
         public IResult Add(Car car)
-        {        
-            //ValidationTool.Validate(new CarValidator(), car);
+        {
+            IResult result = BusinessRules.Run(CheckIfModelExist(car.Model));
+
+            if (result != null)
+            {
+                return result;
+            }
 
             _carDal.Add(car);
             return new SuccessResult(Messages.AddedMessage);
@@ -38,6 +51,8 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedMessage);
         }
 
+        [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("ICarService.Get")]
         public IResult Update(Car car)
         {
             if (car.DailyPrice > 0 && car.Description.Length > 2)
@@ -49,6 +64,7 @@ namespace Business.Concrete
             return new ErrorResult(Messages.ErrorMessage);
         }
 
+        [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
             if (DateTime.Now.Hour >= 02 && DateTime.Now.Hour <= 03)
@@ -74,6 +90,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.DailyPrice >= min && c.DailyPrice <= max));
         }
 
+        [CacheAspect]
         public IDataResult<Car> GetById(int id)
         {
             return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == id)); ;
@@ -82,6 +99,33 @@ namespace Business.Concrete
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
+        }
+
+        [TransactionScopeAspect]
+        public IResult TransactionalTest(Car car)
+        {
+            Add(car);
+            if (car.DailyPrice < 50)
+            {
+                throw new Exception("ERROR!");
+            }
+
+            Add(car);
+
+            return null;
+        }
+
+        //BusinessRules
+
+        private IResult CheckIfModelExist(string Model)
+        {
+            var result = _carDal.GetAll(c => c.Model == Model).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.CarModelAlreadyExist);
+            }
+
+            return new SuccessResult();
         }
 
     }
