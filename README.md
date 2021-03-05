@@ -130,7 +130,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [AspectInterceptorSelector.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/AspectInterceptorSelector.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [MethodInterception.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/MethodInterception.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [MethodInterceptionBaseAttribute.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs) <br>
-nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``BusinessRules`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``BusinessRules`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [BusinessRules.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Business/BusinessRules.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``IoC`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICoreModule.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/IoC/ICoreModule.cs) <br>
@@ -167,7 +167,7 @@ nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``BusinessRules`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IRentalDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IRentalDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IUserDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IPowerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IPowerDal.cs) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IUserDal.cs) <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IUserDal.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; 📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📂 ``EntityFramework`` <br>
@@ -196,7 +196,7 @@ nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``BusinessRules`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarDetailDto.cs](https://github.com/mustafasameturan/RentACarProject/tree/master/Entities/DTOs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalDetailDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/RentalDetailDto.cs) <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserForLoginDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/UserForLoginDto.cs) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserForRegisterDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/UserForRegisterDto.cs) <br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserForRegisterDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/UserForRegisterDto.cs) <br><br>
 
 
 🗃 **``WebAPI``** <br>
@@ -302,6 +302,49 @@ FirstName | nchar(25)
 LastName | nchar(20)
 Email | nchar(50)
 Password | nchar(20)
+
+   </td>
+  </tr>
+ </table>
+ 
+ <table>
+  <tr>
+    <td>Users</td>
+     <td>OperationClaims</td>
+     <td>UserOperaionClaims</td>
+  </tr>
+  <tr>
+    <td>
+
+Variable Name | Data Type
+------------ | -------------
+ıd | int
+FirsName | varchar(50)
+LastName | varchar(50)
+Email | varchar(50)
+PasswordHash | varbinary(500)
+PasswordSalt | varbinary(500)
+Status | bit
+
+
+   </td>
+    <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | int
+Name | varchar(250)
+
+
+   </td>
+    <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | int
+UserId | int
+OperationClaimId | int
+
 
    </td>
   </tr>
