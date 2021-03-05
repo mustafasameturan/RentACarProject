@@ -33,9 +33,21 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 • Köprü → EntityFramework <br>
 • IoC Container → Autofac <br>
 • Arabirim → WebAPI <br>
-• Katmanlar → Business,DataAccess,Entity,Core,ConsoleUI <br> 
+• Katmanlar → Business,DataAccess,Entity,Core,WebAPI <br> 
 
 ![Katmanlar](https://user-images.githubusercontent.com/77546366/108605460-3df2b580-73c5-11eb-9180-1cd05041a560.PNG)
+
+## ☑️Son Güncellemeler
+• Autofac desteği eklendi.<br>
+• FluentValidation uygulaması sisteme entegre edildi.<br>
+• AOP Desteği eklendi. <br>
+• BusinessRules motoru eklendi.<br>
+• JWT entegrasyonu yapıldı.<br>
+• Security sistemi eklendi. Login, Register olma ve Yetki uygulaması sisteme eklendi.<br>
+• Caching Aspect'i eklendi.<br>
+• Transaction Aspect'i eklendi.<br>
+• Performance Aspect'i eklendi.<br>
+
 
 ## ☑️Katmanlar
 
@@ -349,8 +361,3 @@ OperationClaimId | int
    </td>
   </tr>
  </table>
-
-## ☑️Son Güncellemeler
-• Autofac desteği eklendi.<br>
-• FluentValidation uygulaması sisteme entegre edildi.<br>
-
