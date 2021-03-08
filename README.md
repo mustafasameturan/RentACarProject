@@ -323,7 +323,7 @@ Password | nchar(20)
   <tr>
     <td>Users</td>
      <td>OperationClaims</td>
-     <td>UserOperaionClaims</td>
+     <td>UserOperationClaims</td>
   </tr>
   <tr>
     <td>
