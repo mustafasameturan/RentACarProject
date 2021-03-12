@@ -24,18 +24,30 @@ Projem adından da anlaşılacağı üzere bir araba kiralama sistemidir. Projem
 • Müşteri Ekle/Sil/Güncelle/Listele<br>
 • Araba Kiralama Özelliği<br>
 
-gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katmanlı mimarisi sayesinde kodun anlaşılabilirliği yüksektir. Tüm yazılan kodlar bir düzen içerisinde çalışmaktadır. Projemde kullandığım teknolojilerden bahsedeceğim fakat öncesinde sizden talep edilen farklı bir teknoloji kullanmak istediğinizde, projem herhangi bir zorluk yaratmayacaktır. Tamamen "Plug and Play" prensipi göz önüne alınarak tasarlanmıştır. WebAPI arabirimi kullanılmıştır ve IoC Contanier tekniği kullanılmıştır.
+gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katmanlı mimarisi sayesinde kodun anlaşılabilirliği yüksektir. Tüm yazılan kodlar bir düzen içerisinde çalışmaktadır. Projemde kullandığım teknolojilerden bahsedeceğim fakat öncesinde sizden talep edilen farklı bir teknoloji kullanmak istediğinizde, projem herhangi bir zorluk yaratmayacaktır. Tamamen "Plug and Play" prensipi göz önüne alınarak tasarlanmıştır.
 
 ![Katmanlı Mimari](https://user-images.githubusercontent.com/77546366/108605441-21567d80-73c5-11eb-9536-fa39515740d4.PNG) 
 
 ## ☑️Kullanılan Teknolojiler
-• Database → SQL
-• Köprü → EntityFramework
-• IoC Container → Autofac
-• Arabirim → WebAPI
-• Katmanlar → Business,DataAccess,Entity,Core,ConsoleUI
+• Database → SQL <br>
+• Köprü → EntityFramework <br>
+• IoC Container → Autofac <br>
+• Arabirim → WebAPI <br>
+• Katmanlar → Business,DataAccess,Entity,Core,WebAPI <br> 
 
 ![Katmanlar](https://user-images.githubusercontent.com/77546366/108605460-3df2b580-73c5-11eb-9180-1cd05041a560.PNG)
+
+## ☑️Son Güncellemeler
+• Autofac desteği eklendi.<br>
+• FluentValidation uygulaması sisteme entegre edildi.<br>
+• AOP Desteği eklendi. <br>
+• BusinessRules motoru eklendi.<br>
+• JWT entegrasyonu yapıldı.<br>
+• Security sistemi eklendi. Login, Register olma ve Yetki uygulaması sisteme eklendi.<br>
+• Caching Aspect'i eklendi.<br>
+• Transaction Aspect'i eklendi.<br>
+• Performance Aspect'i eklendi.<br>
+
 
 ## ☑️Katmanlar
 
@@ -48,6 +60,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IRentalService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IRentalService.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IUserService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IUserService.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IPowerService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IPowerService.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IAuthService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IAuthService.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/CarManager.cs) <br>
@@ -57,9 +70,14 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/RentalManager.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/UserManager.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [PowerManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/PowerManager.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [AuthManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/AuthManager.cs) <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; 📂 ``BusinessAspects`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📂 ``Autofac`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [SecuredOperation.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/BusinessAspects/Autofac/SecuredOperation.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; 📂 ``Constants`` <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Messages.cs](https://github.com/mustafasameturan/RentACarProject/tree/master/Business/Constants) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [Messages.cs](https://github.com/mustafasameturan/RentACarProject/tree/master/Business/Constants) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; 📂 ``DependencyResolvers`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📂 ``Autofac`` <br>
@@ -75,14 +93,30 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/UserValidator.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [PowerValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/PowerValidator.cs) <br><br>
 
+
 🗃 **``Core``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Aspects`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Autofac`` <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [ValidationAspect.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Aspects/Autofac/Validation/ValidationAspect.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Validation`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [ValidationAspect.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Aspects/Autofac/Validation/ValidationAspect.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Caching`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [CacheAspect.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Aspects/Autofac/Caching/CacheAspect.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [CacheRemoveAspect.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Aspects/Autofac/Caching/CacheRemoveAspect.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Performance`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [PeformanceAspect.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Aspects/Autofac/Performance/PerformanceAspect.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Transaction`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [TransactionScopeAspect.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Aspects/Autofac/Transaction/TransactionScopeAspect.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``CrossCuttingConcerns`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Validation`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [ValidationTool.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/CrossCuttingConcerns/Validation/FluentValidation/ValidationTool.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Caching`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [ICacheManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/CrossCuttingConcerns/Caching/ICacheManager.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Microsoft`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [MemoryCacheManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/CrossCuttingConcerns/Caching/Microsoft/MemoryCacheManager.cs) <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;📂 ``DependencyResolvers`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CoreModule.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/DependencyResolvers/CoreModule.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``DataAccess`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IEntityRepository.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/DataAccess/IEntityRepository.cs) <br>
@@ -90,14 +124,40 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [EfEntityRepositoryBase.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/DataAccess/EntityFramework/EfEntityRepositoryBase.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Entities`` <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/IDto.cs) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IEntity.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/IEntity.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Abstract`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/IDto.cs)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IEntity.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/IEntity.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [OperationClaim.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/Concrete/OperationClaim.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [User.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/Concrete/User.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [UserOperationClaim.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Entities/Concrete/UserOperationClaim.cs) <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Extensions`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ClaimExtensions.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Extensions/ClaimExtensions.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ClaimsPrincipalExtensions.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Extensions/ClaimsPrincipalExtensions.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ServiceCollectionExtensions.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Extensions/ServiceCollectionExtensions.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Utilities`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Interceptors`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [AspectInterceptorSelector.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/AspectInterceptorSelector.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [MethodInterception.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/MethodInterception.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [MethodInterceptionBaseAttribute.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``BusinessRules`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [BusinessRules.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Business/BusinessRules.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``IoC`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICoreModule.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/IoC/ICoreModule.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ServiceTool.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/IoC/ServiceTool.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Autofac`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Encryption`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [SecurityKeyHelper.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/Encryption/SecurityKeyHelper.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [SigningCredentialsHelper.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/Encryption/SigningCredentialsHelper.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Hashing`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [HashingHelper.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/Hashing/HashingHelper.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``JWT`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [AccessToken.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/JWT/AccessToken.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [ITokenHelper.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/JWT/ITokenHelper.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [JwtHelper](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/JWT/JwtHelper.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📃 [TokenOptions.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Security/JWT/TokenOptions.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Results`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IDataResult.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Results/IDataResult.cs) <br>
@@ -119,7 +179,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IRentalDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IRentalDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IUserDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IPowerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IPowerDal.cs) <br>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IUserDal.cs) <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp; 📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📂 ``EntityFramework`` <br>
@@ -130,7 +190,9 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfCustomerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfCustomerDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfRentalDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfRentalDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfUserDal.cs) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfPowerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfPowerDal.cs) <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfPowerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfPowerDal.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfUserDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfUserDal.cs.cs) <br><br>
+
 
 🗃 **``Entities``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
@@ -145,6 +207,9 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``DTOs`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarDetailDto.cs](https://github.com/mustafasameturan/RentACarProject/tree/master/Entities/DTOs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalDetailDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/RentalDetailDto.cs) <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserForLoginDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/UserForLoginDto.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UserForRegisterDto.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/DTOs/UserForRegisterDto.cs) <br><br>
+
 
 🗃 **``WebAPI``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;📃 [Startup.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Startup.cs) <br>
@@ -156,7 +221,8 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CustomersController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/CustomersController.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalsController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/RentalsController.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [UsersController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/UsersController.cs) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [PowersController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/PowersController.cs) <br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [PowersController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/PowersController.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [AuthController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/AuthController.cs) <br><br>
 
 
 
@@ -252,8 +318,46 @@ Password | nchar(20)
    </td>
   </tr>
  </table>
+ 
+ <table>
+  <tr>
+    <td>Users</td>
+     <td>OperationClaims</td>
+     <td>UserOperationClaims</td>
+  </tr>
+  <tr>
+    <td>
 
-## ☑️Son Güncellemeler
-• Autofac desteği eklendi.<br>
-• FluentValidation uygulaması sisteme entegre edildi.<br>
+Variable Name | Data Type
+------------ | -------------
+ıd | int
+FirsName | varchar(50)
+LastName | varchar(50)
+Email | varchar(50)
+PasswordHash | varbinary(500)
+PasswordSalt | varbinary(500)
+Status | bit
 
+
+   </td>
+    <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | int
+Name | varchar(250)
+
+
+   </td>
+    <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | int
+UserId | int
+OperationClaimId | int
+
+
+   </td>
+  </tr>
+ </table>
