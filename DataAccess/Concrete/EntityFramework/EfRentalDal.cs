@@ -43,6 +43,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  Model = cars.Model,
                                  Description = cars.Description
                                  
+
                              };
                 
                 return result.ToList();
