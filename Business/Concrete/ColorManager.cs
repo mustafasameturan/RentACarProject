@@ -22,7 +22,7 @@ namespace Business.Concrete
             _colorDal = colorDal;
         }
 
-        [SecuredOperation("color.add, admin")]
+        //[SecuredOperation("color.add, admin")]
         [ValidationAspect(typeof(ColorValidator))]
         public IResult Add(Color color)
         {
@@ -48,5 +48,11 @@ namespace Business.Concrete
             _colorDal.Update(color);
             return new SuccessResult(Messages.UpdatedMessage);
         }
+
+        public IDataResult<Color> GetByColorId(int colorId)
+        {
+            return new SuccessDataResult<Color>(_colorDal.Get(b => b.ColorId == colorId));
+        }
+
     }
 }
