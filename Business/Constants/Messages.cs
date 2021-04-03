@@ -25,5 +25,10 @@ namespace Business.Constants
         public static string SuccessfulLogin = "User is successfully login!";
         public static string UserAlreadyExists = "User is already exist in the system!";
         public static string AccessTokenCreated = "Access Token Created!";
+        public static string ImageFound = "Image Not Found!";
+        public static string FileFound = "File Not Found!";
+        public static string ImageCount = "A Car Must Have 5 Image!";
+
+
     }
 }
