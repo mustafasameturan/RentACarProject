@@ -48,6 +48,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 ☑️ Caching Aspect'i eklendi.<br>
 ☑️ Transaction Aspect'i eklendi.<br>
 ☑️ Performance Aspect'i eklendi.<br>
+☑️ Sistemde kayıtlı arabalar için fotoğraf ekleme/silme/güncelleme özelliği entegre edildi..<br>
 
 
 ## Katmanlar
