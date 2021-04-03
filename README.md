@@ -290,8 +290,9 @@ HorsePower | nchar(4)
  <table>
   <tr>
     <td>Customers</td>
-     <td>Rentals</td>
-     <td>Users</td>
+    <td>Rentals</td>
+    <td>Users</td>
+    <td>CarImages</td>
   </tr>
   <tr>
     <td>
@@ -323,6 +324,16 @@ FirstName | nchar(25)
 LastName | nchar(20)
 Email | nchar(50)
 Password | nchar(20)
+
+   </td>
+   <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | int
+Car | int
+ImagePath | nvarchar(max)
+Date | datetime2(7)
 
    </td>
   </tr>
