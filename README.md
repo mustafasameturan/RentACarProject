@@ -7,13 +7,13 @@
 Projeyi yazmamdaki amacımdan bahsetmek istiyorum çünkü bunu projeyi daha anlamlı kılacak bir unsur olarak görüyorum. Başlıca amacım C# dilini, .NET dünyasını tanımak, bu yolda uzmanlaşmaktır. Yazdığım bu proje kendimi geliştirmeme vesile oluyor. Ayrıca bu proje ile birlikte SOLID yazılım tekniklerini öğreniyorum. Yazılım Geliştirici olma yolunda ilerlerken temelimi sağlam atmaya çalışıyorum ve sadece kendi penceremden değil, bu projeyi okuyacak, üstünde çalışacak insanların penceresinden de bakarak çalışmalarıma devam ediyorum.
 
 ## 🌟İçindekiler
-- [Tanıtım](#☑️tanıtım)
+- [Tanıtım](#tanıtım)
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Katmanlar](#katmanlar)
 - [Sql Tables](#sql-tables)
 - [Son Güncellemeler](#son-güncellemeler)
 
-## ☑️Tanıtım
+## Tanıtım
 Projem adından da anlaşılacağı üzere bir araba kiralama sistemidir. Projemde, kendi oluşturduğum database üzerinden gelen bilgileri yönlendirerek;<br>
 
 • Araba Ekle/Sil/Güncelle/Listele<br>
