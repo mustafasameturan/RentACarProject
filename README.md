@@ -1,4 +1,4 @@
-# RentACarProject
+<h1 align="center">Rent A Car Project - Araba Kiralama Sistemi </h1>
 
 ## 🌟Teşekkür 
 Öncelikle bana bu projeyi yazmamda büyük desteği olan, bana çok değerli bilgiler katan Engin Demiroğ Hocama teşekkür ediyorum. Ayrıca bu yolda bana destek olan arkadaşlarıma ve aileme de teşekkürlerimi iletiyorum.
@@ -10,19 +10,20 @@ Projeyi yazmamdaki amacımdan bahsetmek istiyorum çünkü bunu projeyi daha anl
 - [Tanıtım](#tanıtım)
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Katmanlar](#katmanlar)
-- [Sql Tables](#sql-tables)
+- [SQL Tables](#sql-tables)
 - [Son Güncellemeler](#son-güncellemeler)
 
 ## Tanıtım
 Projem adından da anlaşılacağı üzere bir araba kiralama sistemidir. Projemde, kendi oluşturduğum database üzerinden gelen bilgileri yönlendirerek;<br>
 
-• Araba Ekle/Sil/Güncelle/Listele<br>
-• Araba Gücü(HP) Ekle/Sil/Güncelle/Listele<br>
-• Marka Ekle/Sil/Güncelle/Listele<br>
-• Renk Ekle/Sil/Güncelle/Listele<br>
-• Kullanıcı Ekle/Sil/Güncelle/Listele<br>
-• Müşteri Ekle/Sil/Güncelle/Listele<br>
-• Araba Kiralama Özelliği<br>
+☑️ Araba Ekle/Sil/Güncelle/Listele<br>
+☑️ Araba Gücü(HP) Ekle/Sil/Güncelle/Listele<br>
+☑️ Araba Fotoğrafı Ekle/sil/Güncelle/Listele<br>
+☑️ Marka Ekle/Sil/Güncelle/Listele<br>
+☑️ Renk Ekle/Sil/Güncelle/Listele<br>
+☑️ Kullanıcı Ekle/Sil/Güncelle/Listele<br>
+☑️ Müşteri Ekle/Sil/Güncelle/Listele<br>
+☑️ Araba Kiralama Özelliği<br>
 
 gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katmanlı mimarisi sayesinde kodun anlaşılabilirliği yüksektir. Tüm yazılan kodlar bir düzen içerisinde çalışmaktadır. Projemde kullandığım teknolojilerden bahsedeceğim fakat öncesinde sizden talep edilen farklı bir teknoloji kullanmak istediğinizde, projem herhangi bir zorluk yaratmayacaktır. Tamamen "Plug and Play" prensipi göz önüne alınarak tasarlanmıştır.
 
