@@ -1,4 +1,5 @@
-# RentACarProject
+<h1 align="center">Rent A Car Project - Araba Kiralama Sistemi </h1>
+
 
 ## 🌟Teşekkür 
 Öncelikle bana bu projeyi yazmamda büyük desteği olan, bana çok değerli bilgiler katan Engin Demiroğ Hocama teşekkür ediyorum. Ayrıca bu yolda bana destek olan arkadaşlarıma ve aileme de teşekkürlerimi iletiyorum.
@@ -10,51 +11,54 @@ Projeyi yazmamdaki amacımdan bahsetmek istiyorum çünkü bunu projeyi daha anl
 - [Tanıtım](#tanıtım)
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Katmanlar](#katmanlar)
-- [Sql Tables](#sql-tables)
+- [SQL Tables](#sql-tables)
 - [Son Güncellemeler](#son-güncellemeler)
 
-## ☑️Tanıtım
+## Tanıtım
 Projem adından da anlaşılacağı üzere bir araba kiralama sistemidir. Projemde, kendi oluşturduğum database üzerinden gelen bilgileri yönlendirerek;<br>
 
-• Araba Ekle/Sil/Güncelle/Listele<br>
-• Araba Gücü(HP) Ekle/Sil/Güncelle/Listele<br>
-• Marka Ekle/Sil/Güncelle/Listele<br>
-• Renk Ekle/Sil/Güncelle/Listele<br>
-• Kullanıcı Ekle/Sil/Güncelle/Listele<br>
-• Müşteri Ekle/Sil/Güncelle/Listele<br>
-• Araba Kiralama Özelliği<br>
+☑️ Araba Ekle/Sil/Güncelle/Listele<br>
+☑️ Araba Gücü(HP) Ekle/Sil/Güncelle/Listele<br>
+☑️ Araba Fotoğrafı Ekle/sil/Güncelle/Listele<br>
+☑️ Marka Ekle/Sil/Güncelle/Listele<br>
+☑️ Renk Ekle/Sil/Güncelle/Listele<br>
+☑️ Kullanıcı Ekle/Sil/Güncelle/Listele<br>
+☑️ Müşteri Ekle/Sil/Güncelle/Listele<br>
+☑️ Araba Kiralama Özelliği<br>
 
 gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katmanlı mimarisi sayesinde kodun anlaşılabilirliği yüksektir. Tüm yazılan kodlar bir düzen içerisinde çalışmaktadır. Projemde kullandığım teknolojilerden bahsedeceğim fakat öncesinde sizden talep edilen farklı bir teknoloji kullanmak istediğinizde, projem herhangi bir zorluk yaratmayacaktır. Tamamen "Plug and Play" prensipi göz önüne alınarak tasarlanmıştır.
 
 ![Katmanlı Mimari](https://user-images.githubusercontent.com/77546366/108605441-21567d80-73c5-11eb-9536-fa39515740d4.PNG) 
 
-## ☑️Kullanılan Teknolojiler
-• Database → SQL <br>
-• Köprü → EntityFramework <br>
-• IoC Container → Autofac <br>
-• Arabirim → WebAPI <br>
-• Katmanlar → Business,DataAccess,Entity,Core,WebAPI <br> 
+## Kullanılan Teknolojiler
+☑️ Database → SQL <br>
+☑️ Çatı → EntityFramework <br>
+☑️ IoC Container → Autofac <br>
+☑️ Arabirim → WebAPI <br>
+☑️ Katmanlar → Business,DataAccess,Entity,Core,WebAPI <br> 
 
 ![Katmanlar](https://user-images.githubusercontent.com/77546366/108605460-3df2b580-73c5-11eb-9180-1cd05041a560.PNG)
 
-## ☑️Son Güncellemeler
-• Autofac desteği eklendi.<br>
-• FluentValidation uygulaması sisteme entegre edildi.<br>
-• AOP Desteği eklendi. <br>
-• BusinessRules motoru eklendi.<br>
-• JWT entegrasyonu yapıldı.<br>
-• Security sistemi eklendi. Login, Register olma ve Yetki uygulaması sisteme eklendi.<br>
-• Caching Aspect'i eklendi.<br>
-• Transaction Aspect'i eklendi.<br>
-• Performance Aspect'i eklendi.<br>
+## Son Güncellemeler
+☑️ Autofac desteği eklendi.<br>
+☑️ FluentValidation uygulaması sisteme entegre edildi.<br>
+☑️ AOP Desteği eklendi. <br>
+☑️ BusinessRules motoru eklendi.<br>
+☑️ JWT entegrasyonu yapıldı.<br>
+☑️ Security sistemi eklendi. Login, Register olma ve Yetki uygulaması sisteme eklendi.<br>
+☑️ Caching Aspect'i eklendi.<br>
+☑️ Transaction Aspect'i eklendi.<br>
+☑️ Performance Aspect'i eklendi.<br>
+☑️ Sistemde kayıtlı arabalar için fotoğraf ekleme/silme/güncelleme özelliği entegre edildi..<br>
 
 
-## ☑️Katmanlar
+## Katmanlar
 
 🗃 **``Business``** <br>
 &nbsp;&nbsp;&nbsp;&nbsp; 📂 ``Abstract`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICarService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/ICarService.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IBrandService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IBrandService.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICarImageService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/ICarImageService.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IColorService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IColorService.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICustomerService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/ICustomerService.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IRentalService.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Abstract/IRentalService.cs) <br>
@@ -65,6 +69,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/CarManager.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [BrandManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/BrandManager.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarImageManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/CarImageManager.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ColorManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/ColorManager.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CustomerManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/CustomerManager.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalManager.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/Concrete/RentalManager.cs) <br>
@@ -87,6 +92,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📂 ``FluentValidation`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [BrandValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/BrandValidator.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/CarValidator.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarImageValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/CarImageValidator.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ColorValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/ColorValidator.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CustomerValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/CustomerValidator.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalValidator.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Business/ValidationRules/FluentValidation/RentalValidator.cs) <br>
@@ -144,6 +150,8 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [MethodInterceptionBaseAttribute.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``BusinessRules`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [BusinessRules.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Business/BusinessRules.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Helpers`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [FileHelper.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/Helpers/FileHelper.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ``IoC`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICoreModule.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/IoC/ICoreModule.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ServiceTool.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Core/Utilities/IoC/ServiceTool.cs) <br>
@@ -174,6 +182,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Abstract`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICarDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/ICarDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IBrandDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IBrandDal.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICarImageDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/ICarImageDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IColorDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IColorDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ICustomerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/ICustomerDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [IRentalDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Abstract/IRentalDal.cs) <br>
@@ -186,6 +195,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [ReCapProjectDatabaseContext.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/ReCapProjectDatabaseContext.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfCarDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfCarDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfBrandDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfBrandDal.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfCarImageDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfCarImageDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfColorDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfColorDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfCustomerDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfCustomerDal.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  📃 [EfRentalDal.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/DataAccess/Concrete/EntityFramework/EfRentalDal.cs) <br>
@@ -198,6 +208,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Car.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Car.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Brand.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Brand.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarImage.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/CarImage.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Color.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Color.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Customer.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Customer.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [Rental.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/Entities/Concrete/Rental.cs) <br>
@@ -217,6 +228,7 @@ gibi imkanlar mevcuttur. Ayrıca projem bir katmanlı mimaridir. Projemin katman
 &nbsp;&nbsp;&nbsp;&nbsp;📂 ``Controllers`` <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [BrandsController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/BrandsController.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarsController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/CarsController.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CarImagesController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/CarImagesController.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [ColorsController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/ColorsController.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [CustomersController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/CustomersController.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📃 [RentalsController.cs](https://github.com/mustafasameturan/RentACarProject/blob/master/WebAPI/Controllers/RentalsController.cs) <br>
@@ -281,8 +293,9 @@ HorsePower | nchar(4)
  <table>
   <tr>
     <td>Customers</td>
-     <td>Rentals</td>
-     <td>Users</td>
+    <td>Rentals</td>
+    <td>Users</td>
+    <td>CarImages</td>
   </tr>
   <tr>
     <td>
@@ -314,6 +327,16 @@ FirstName | nchar(25)
 LastName | nchar(20)
 Email | nchar(50)
 Password | nchar(20)
+
+   </td>
+   <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | int
+Car | int
+ImagePath | nvarchar(max)
+Date | datetime2(7)
 
    </td>
   </tr>
