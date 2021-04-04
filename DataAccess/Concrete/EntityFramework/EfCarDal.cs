@@ -38,6 +38,7 @@ namespace DataAccess.Concrete.EntityFramework
                                               where img.CarId == c.CarId 
                                               select img.ImagePath).FirstOrDefault()
 
+
                                  //ImagePath = img.ImagePath == null ? "Image Not Found" : img.ImagePath
                              };
 
