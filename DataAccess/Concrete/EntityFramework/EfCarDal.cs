@@ -23,21 +23,26 @@ namespace DataAccess.Concrete.EntityFramework
                              on c.BrandId equals b.BrandId
                              join co in context.Colors
                              on c.ColorId equals co.ColorId
-                             select new CarDetailDto 
+                             //from img in context.CarImages
+                             //where c.CarId == img.CarId
+                             select new CarDetailDto
                              {
                                  CarId = c.CarId,
-                                 BrandName = b.BrandName, 
+                                 BrandName = b.BrandName,
                                  ColorName = co.ColorName,
                                  Model = c.Model,
                                  ModelYear = c.ModelYear,
                                  Description = c.Description,
-                                 DailyPrice = c.DailyPrice,   
+                                 DailyPrice = c.DailyPrice,
+                                 ImagePath = (from img in context.CarImages 
+                                              where img.CarId == c.CarId 
+                                              select img.ImagePath).FirstOrDefault()
+
+                                 //ImagePath = img.ImagePath == null ? "Image Not Found" : img.ImagePath
                              };
 
                 return result.ToList();           
             }
         }
-
-
     }
 }
